@@ -15,6 +15,7 @@ A chrome extension to further the ability and usability of FocusVision's Deciphe
  - Slightly darker borders have been added to buttons with softer backgrounds.
  - Hovering over rows/cols now has a darker background color. Selecting one has an even darker background color.
  - Modal child elements have been given borders to make it easier to see panel edges.
+ - Value range inputs have been made inline.
 
 #### Additions
  - A lock button has been added at the top of the left navigation tree. This locks/unlocks the draggability of the tree items.

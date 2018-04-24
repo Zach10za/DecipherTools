@@ -54,7 +54,43 @@ div.logicSelectors.p-0 {
 .ui-dialog-content.ui-widget-content {
     border: 1px solid rgba(0,0,0,0.2) !important;
 }
+.ui-dialog.ui-widget.ui-corner-all {
+    padding: 10px 0 !important;
+}
+.ui-dialog.ui-widget.ui-corner-all .ui-dialog-titlebar {
+    padding-bottom: 10px !important;
+}
+.ui-dialog.ui-widget.ui-corner-all .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    top: 15px !important;
+}
+.ui-dialog.ui-widget.ui-corner-all .ui-dialog-buttonpane {
+    padding-top: 10px !important;
+}
+.ui-dialog.ui-widget.ui-corner-all .ui-dialog-buttonpane button {
+    margin-bottom: 0 !important;
+}
 
+.ui-dialog-content {
+    max-height: 700px !important;
+}
+
+.logic-conditions .logicCodeBox #cond_value {
+    margin: 4px 0 !important;
+    height: 30px !important;
+}
+.logic-conditions .logicTopBox {
+    padding-bottom: 80px !important;
+}
+.logic-conditions .logicBoxArrows .addLogicBox {
+    background: rgba(0,0,0,0.1) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+}
+.logic-conditions .logicSelectors {
+    max-height: none !important;
+    height: 400px !important;
+}
+
+/* main content */
 .questionBuilder .cell-item.optionFocus .item-table {
     background-color: rgba(27,115,179,0.4) !important;
 }

@@ -1,0 +1,146 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+/* Left Side bar */
+
+a.page::before {
+    border-width: 2px !important;
+    border-color: rgba(0,0,0,0.5) !important;
+    margin: 0 !important;
+}
+
+li.jstree-leaf a, li.jstree-open a {
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
+li.jstree-leaf.page {
+    height: 12px !important;
+}
+
+li.jstree-leaf.terminate a i {
+    color: red !important;
+}
+
+li.jstree-leaf.quota a i {
+    color: #1a58bc !important;
+}
+
+li.jstree-leaf a span.element-pill {
+    font-size: 12px !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+li.jstree-leaf a span.element-pill i {
+    font-size: 16px !important;
+}
+
+li.jstree-open ul li {
+    border-left: 1px solid rgba(0,0,0,0.2) !important;
+}
+
+.vsplitbar.splitter-bar-vertical {
+    width: 8px !important;
+    z-index: 100 !important;
+}
+
+/* Modal */
+
+div.logicSelectors.p-0 {
+    border: 1px solid rgba(0,0,0,0.2) !important;
+}
+
+.ui-dialog-content.ui-widget-content {
+    border: 1px solid rgba(0,0,0,0.2) !important;
+}
+
+.questionBuilder .cell-item.optionFocus .item-table {
+    background-color: rgba(27,115,179,0.4) !important;
+}
+
+.questionBuilder .cell-item.optionFocus:hover .item-table {
+    background-color: rgba(27,115,179,0.6)  !important;
+}
+
+.questionBuilder .cell-item:hover .item-table {
+    background-color: rgba(27,115,179,0.2) !important;
+}
+
+div.pseudo-input.title.js-rte.js-rte-full.js-title.form-control.form-textfield-input {
+    font-size: 0.9rem !important;
+    min-height: 2rem !important;
+}
+
+div.pseudo-input.comment.js-comment.js-rte.js-rte-full.form-control.form-textfield-input {
+    font-size: 0.8rem !important;
+    min-height: 2rem !important;
+}
+
+.rangeTemplate input {
+    min-height: 30px !important;
+    width: auto !important;
+}
+
+button.js-button-newCell.btn.btn-default.mt-1 {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    background-color: rgba(62,84,103,0.15) !important;
+}
+
+div.quotaFields div {
+    max-width: 500px !important;
+}
+
+div.d-flex.cell-wrapper.square {
+    min-width: 20px !important;
+}
+
+button.dux-button {
+    border: 1px solid rgba(0,0,0,0.2) !important;
+}
+
+button.btn-secondary.clickable.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+button.btn.btn-utility {
+    border: 1px solid rgba(0,0,0,0.2) !important;
+}
+
+div.stageElementArea {
+    bottom: 50px !important;
+}
+
+div.stageControlBar.top {
+    border-bottom: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: transparent !important;
+    height: 49px !important;
+}
+
+div.stageControlBar.bottom {
+    border-top: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: #FFF !important;
+}
+
+div.question.builderElement.radio {
+    padding: 0 !important;
+}
+
+div.config-el.floatcontainer.optionFocus {
+    border-radius: 0 !important;
+}
+
+div.elementTop.options.floatcontainer.py-2 {
+    border-radius: 0 !important;
+}
+
+div.optionsMenu .qn-label-type .uiMenuLeft, div.optionsMenu .qn-label-type .uiMenuRight {
+    display: inline-block !important;
+    width: auto !important;
+    margin-left: 2px !important;
+}
+
+/* left pane lock button */
+#leftPane .surveyElementsHeader a.locked {
+    color: red;
+}

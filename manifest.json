@@ -1,0 +1,48 @@
+{
+  "name": "Decipher Tools",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension adds additional functionality and a more functional UI to the Decipher platform.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Decipher Tools"
+  },
+  "permissions": [
+    "contentSettings",
+    "contextMenus",
+    "notifications",
+    "storage",
+    "declarativeContent"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://v2.decipherinc.com/apps/lumos/bec/*:edit"],
+      "css": ["src/inject/builder/builder.css"],
+      "js": ["src/inject/builder/builder.js"]
+    },
+    {
+      "matches": ["https://v2.decipherinc.com/apps/lumos/bec/*:xmledit"],
+      "js": ["src/inject/xml/xml.js"]
+    },
+    {
+      "matches": ["https://v2.decipherinc.com/rep/selfserve/bec/*:dashboard*"],
+      "css": ["src/inject/field_report/field_report.css"],
+      "js": ["src/inject/field_report/field_report.js"]
+    },
+    {
+      "matches": ["https://v2.decipherinc.com/apps/portal*"],
+      "include_globs": ["*#/projects/list*"],
+      "css": ["src/inject/portal/portal.css"],
+      "js": ["src/inject/portal/portal.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["src/background.js"]
+  }
+}

@@ -1,46 +1,63 @@
-/**
- * Place your custom CSS styles here.
- **/
-/* Left Side bar */
 
-a.page::before {
+
+/* Left Side bar */
+/* Increase size of page breaks */
+#builder #tree-target.jstree li[rel~="page"]>a::before {
     border-width: 2px !important;
     border-color: rgba(0,0,0,0.5) !important;
     margin: 0 !important;
 }
-
+#builder .daTree li[rel~=page] {
+    height: 6px !important;
+    min-height: 0 !important;
+}
+#builder .daTree li[rel~=page] a {
+    padding: 2px 0 !important;
+    margin-top: -1px !important;
+}
+#builder .daTree li[rel~=page] .jstree-icon {
+    height: 0 !important;
+}
+/* Remove card drop shadow and margin */
 li.jstree-leaf a, li.jstree-open a {
     box-shadow: none !important;
     margin: 0 !important;
 }
 
+/* Fix height of list item at 12px */
 li.jstree-leaf.page {
     height: 12px !important;
 }
 
-li.jstree-leaf.terminate a i {
+/* Change color of term icon to red */
+li.jstree-leaf[rel~="terminate"]>a i {
     color: red !important;
 }
 
-li.jstree-leaf.quota a i {
+/* Change color of quota icon to blue */
+li.jstree-leaf[rel~="quota"]>a i {
     color: #1a58bc !important;
 }
 
+/* Decrease label size and clear background */
 li.jstree-leaf a span.element-pill {
     font-size: 12px !important;
     padding: 0 !important;
     background: none !important;
 }
 
+/* Increase icon size */
 li.jstree-leaf a span.element-pill i {
     font-size: 16px !important;
 }
 
+/* Add left border to nested items */
 li.jstree-open ul li {
-    border-left: 1px solid rgba(0,0,0,0.2) !important;
+    border-left: 1px solid rgba(0,0,0,0.5) !important;
 }
 
-.vsplitbar.splitter-bar-vertical {
+/* increase width of resize handle */
+.framework #splitStage .vsplitbar {
     width: 8px !important;
     z-index: 100 !important;
 }
@@ -87,7 +104,18 @@ div.logicSelectors.p-0 {
 }
 .logic-conditions .logicSelectors {
     max-height: none !important;
-    height: 400px !important;
+    height: 450px !important;
+}
+.ui-dialog.ui-widget.ui-corner-all .ui-dialog-content {
+    max-height: none !important;
+    height: 600px !important;
+}
+.optionContainer input[type=checkbox] {
+    width: auto !important;
+}
+.loopConfigContent {
+    max-height: none !important;
+    height: 100% !important;
 }
 
 /* main content */
@@ -174,6 +202,9 @@ div.optionsMenu .qn-label-type .uiMenuLeft, div.optionsMenu .qn-label-type .uiMe
     display: inline-block !important;
     width: auto !important;
     margin-left: 2px !important;
+}
+.OPT_question_type, .menu-data-value {
+    margin-left: 0;
 }
 
 /* left pane lock button */

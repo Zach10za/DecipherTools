@@ -6,17 +6,47 @@ chrome.runtime.sendMessage({type: "enabled"}, function(response) {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
 
-		const head = document.head || document.getElementsByTagName('head')[0];
-		const link = document.createElement('link');
-		link.rel = "stylesheet";
-		link.type = "text/css";
-		link.href = chrome.runtime.getURL("/src/inject/builder/builder.css");
-		head.appendChild(link);
+		// const head = document.head || document.getElementsByTagName('head')[0];
+		// const link = document.createElement('link');
+		// link.rel = "stylesheet";
+		// link.type = "text/css";
+		// link.href = chrome.runtime.getURL("/src/inject/builder/builder.css");
+		// head.appendChild(link);
 		
 
 		const secondaryNavbar = document.querySelector('nav.gh-secondary-navigation ul');
 		const secondaryNavbarXML = document.querySelector('nav.gh-secondary-navigation ul li.gh-menu-holder ul.gh-dropdown-menu li:nth-of-type(3)');
 		secondaryNavbar.insertBefore(secondaryNavbarXML, secondaryNavbar.querySelector('li:nth-of-type(2)'));
+
+
+		const leftPaneWidthDefault = 400;
+
+		const leftPane = document.getElementById("leftPane");
+		let leftPaneWidthCurrent = parseInt(leftPane.style.width.split('px')[0], 10);
+		let shift = leftPaneWidthDefault - leftPaneWidthCurrent;
+		leftPane.style.width = leftPaneWidthDefault + 'px';
+
+		const rightPane = document.getElementById("rightPane");
+		rightPane.style.left = (parseInt(rightPane.style.left.split('px')[0], 10) + shift) + 'px';
+		rightPane.style.width = (parseInt(rightPane.style.width.split('px')[0], 10) - shift) + 'px';
+
+		const stageCurtain = document.getElementById("stage-curtain-toggle");
+		stageCurtain.style.left = (parseInt(stageCurtain.style.left.split('px')[0], 10) + shift) + 'px';
+
+		const stage = document.getElementById("stage");
+		stage.style.width = (parseInt(stage.style.width.split('px')[0], 10) - shift) + 'px';
+
+		const optionsPanel = document.getElementById("optionsPanel");
+		optionsPanel.style.left = (parseInt(optionsPanel.style.left.split('px')[0], 10) - shift) + 'px';
+
+		const otherBar = rightPane.querySelector('.splitter-bar.splitter-bar-vertical');
+		otherBar.style.left = (parseInt(otherBar.style.left.split('px')[0], 10) + shift) + 'px';
+
+		const handle = document.querySelector(".vsplitbar.splitter-bar-vertical");
+		handle.style.left = leftPaneWidthDefault + 'px';
+
+
+
 
 
 		// Lock the left side pane

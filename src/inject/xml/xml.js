@@ -1,6 +1,7 @@
 chrome.extension.sendRequest("show_page_action");
 
-chrome.extension.sendMessage({}, function(response) {
+chrome.runtime.sendMessage({type: "enabled"}, function(response) {
+	if (response.enabled === false) return;
 	var readyStateCheckInterval = setInterval(function() {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);

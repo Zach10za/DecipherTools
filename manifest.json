@@ -11,7 +11,8 @@
   "default_locale": "en",
   "page_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "Decipher Tools"
+    "default_title": "Decipher Tools",
+    "default_popup": "src/popup/popup.html"
   },
   "permissions": [
     "contentSettings",
@@ -20,10 +21,14 @@
     "storage",
     "declarativeContent"
   ],
+  "web_accessible_resources": [
+    "src/inject/builder/builder.css",
+    "src/inject/portal/portal.css",
+    "src/inject/field_report/field_report.css"
+  ],
   "content_scripts": [
     {
       "matches": ["https://v2.decipherinc.com/apps/lumos/bec/*:edit"],
-      "css": ["src/inject/builder/builder.css"],
       "js": ["src/inject/builder/builder.js"]
     },
     {
@@ -32,13 +37,11 @@
     },
     {
       "matches": ["https://v2.decipherinc.com/rep/selfserve/bec/*:dashboard*"],
-      "css": ["src/inject/field_report/field_report.css"],
       "js": ["src/inject/field_report/field_report.js"]
     },
     {
       "matches": ["https://v2.decipherinc.com/apps/portal*"],
       "include_globs": ["*#/projects/list*"],
-      "css": ["src/inject/portal/portal.css"],
       "js": ["src/inject/portal/portal.js"]
     }
   ],

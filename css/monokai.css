@@ -37,9 +37,9 @@
 
 
 /* Decipher XML Specific Styles */
-#topToolBar, .dux-control-bar-bottom {
+#topToolBar.dark-theme, .dux-control-bar-bottom.dark-theme {
   background: #1b1c17 !important;
 }
-#topToolBar a {
+#topToolBar.dark-theme a {
   color: #FFF !important;
 }

@@ -21,6 +21,9 @@
     "storage",
     "declarativeContent"
   ],
+  "web_accessible_resources": [
+    "css/*.css"
+  ],
   "content_scripts": [
     {
       "matches": ["https://v2.decipherinc.com/apps/lumos/bec/*:edit"],

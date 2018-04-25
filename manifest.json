@@ -1,6 +1,6 @@
 {
   "name": "Decipher Tools",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "manifest_version": 2,
   "description": "This extension adds additional functionality and a more functional UI to the Decipher platform.",
   "icons": {

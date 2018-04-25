@@ -207,6 +207,11 @@ div.optionsMenu .qn-label-type .uiMenuLeft, div.optionsMenu .qn-label-type .uiMe
     margin-left: 0;
 }
 
+/* Increase size of SKIP drop down menu */
+.goto-dropMenu {
+    height: 400px !important;
+}
+
 /* left pane lock button */
 #leftPane .surveyElementsHeader a.locked {
     color: red;

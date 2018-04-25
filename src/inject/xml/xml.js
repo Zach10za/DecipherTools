@@ -17,18 +17,19 @@ chrome.runtime.sendMessage({type: "enabled"}, function(response) {
 			const secondaryNavbarXML = document.querySelector('nav.gh-secondary-navigation ul li.gh-menu-holder ul.gh-dropdown-menu li:nth-of-type(2)');
 			secondaryNavbar.insertBefore(secondaryNavbarXML, secondaryNavbar.querySelector('li:nth-of-type(2)'));
 
-			const codeMirror = document.querySelector('.CodeMirror');
 			const topToolBar = document.getElementById('topToolBar');
 			const bottomControlBar = document.querySelector('.dux-control-bar-bottom');
 
 			chrome.storage.sync.get(['theme'], (items) => {
 				let themeState = items.theme || "light";
 				if (themeState === "dark") {
+					const codeMirror = document.querySelector('.CodeMirror');
 					codeMirror.classList.add('cm-s-monokai');
 					codeMirror.classList.remove('cm-s-default');
 					topToolBar.classList.add('dark-theme');
 					bottomControlBar.classList.add('dark-theme');
 				}
+				chrome.storage.sync.set({'theme': themeState});
 			});
 
 			const viewMenu = document.getElementById('view-menu');
@@ -40,6 +41,7 @@ chrome.runtime.sendMessage({type: "enabled"}, function(response) {
 			linkText.removeChild(linkText.getElementsByTagName('span')[1]);
 			linkText.textContent = 'Toggle Night Mode';
 			linkText.onclick = function(e) {
+				const codeMirror = document.querySelector('.CodeMirror');
 				if (codeMirror.classList.contains('cm-s-default')) {
 					codeMirror.classList.add('cm-s-monokai');
 					codeMirror.classList.remove('cm-s-default');
@@ -57,5 +59,5 @@ chrome.runtime.sendMessage({type: "enabled"}, function(response) {
 			viewMenu.appendChild(themeToggle);
 
 		}
-	}, 10);
+	}, 100);
 });

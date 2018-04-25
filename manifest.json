@@ -1,6 +1,6 @@
 {
   "name": "Decipher Tools",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "manifest_version": 2,
   "description": "This extension adds additional functionality and a more functional UI to the Decipher platform.",
   "icons": {
@@ -16,10 +16,8 @@
   },
   "permissions": [
     "contentSettings",
-    "contextMenus",
     "notifications",
-    "storage",
-    "declarativeContent"
+    "storage"
   ],
   "web_accessible_resources": [
     "css/*.css"

@@ -15,6 +15,7 @@ A chrome extension to further the ability and usability of FocusVision's Deciphe
  - Slightly darker borders have been added to buttons with softer backgrounds.
  - Hovering over rows/cols now has a darker background color. Selecting one has an even darker background color.
  - Modal child elements have been given borders to make it easier to see panel edges.
+ - Modal height has been increased to 600px;
  - Value range inputs have been made inline.
 
 #### Additions
@@ -23,6 +24,7 @@ A chrome extension to further the ability and usability of FocusVision's Deciphe
 
 ### XML Editor
 #### Additions
+ - A Dark Theme can now be applied to CodeMirror + surrounding elements with the "Toggle Night Mode" button.
  - "Edit XML" has been moved out of more tools and added to the secondary navigation bar.
 
 ### Field Report
